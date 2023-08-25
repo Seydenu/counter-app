@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter App</title>
+
+	<style type="text/css">
+		
+		header {
+			display: flex;
+			background-color: darkcyan;
+			justify-content: space-between;
+			padding-left: 20px;
+			padding-right: 20px;
+			flex-wrap: wrap;
+		}
+
+
+		li {
+			padding: 20px;
+			list-style: none;
+			justify-content: space-between;
+			padding-top: 20px;
+		}
+
+
+        #hey {
+        	text-align: center;
+        	font-size: 180px;
+        }
+
+        footer {
+        	display: flex;
+			background-color: darkcyan;
+			justify-content: space-evenly;
+			padding-left: 20px;
+			padding-right: 20px;
+        }
+
+        button {
+        	font-size: 75px;
+        	cursor: pointer;
+
+        }
+
+	</style>
+</head>
+<body>
+	<header>
+		
+		<h1>Counter App</h1>
+
+		<nav>
+			<p>The home of counting</p>
+		</nav>
+	</header>
+
+	<h1 id="hey">0</h1>
+
+
+	<footer>
+		<button onclick="decrease()">-</button>
+		<button onclick="increase()">+</button>
+	</footer>
+
+
+	<script type="text/javascript">
+		
+function increase () {
+		let hey = document.getElementById("hey");
+
+		let number = hey.innerText;
+
+		hey.innerText = parseInt(number) + 1;
+	}
+
+
+
+	function decrease () {
+		let hey = document.getElementById("hey");
+
+		let number = parseInt(hey.innerText);
+		if(number > 0){
+			hey.innerText = number -1
+		}
+
+
+		else{
+			hey.innerText = 0;
+		}
+		
+	}
+
+
+	</script>
+
+</body>
+</html>
